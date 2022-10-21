@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        #hero{
+            /* border: 2px solid lime; */
+            /* display: flex; */
+            height: 100vh;
+            background-image: url(pic2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 100%  100%;
+            background-color: rgb(255, 255, 255);
+
+        }
+        .menu_plate{
+            /* border: 2px solid yellow; */
+            display: flex;
+            height: 60px;
+            width: 100%;
+            /* flex-wrap: wrap; */
+            /* background-color:rgb(91, 97, 103); */
+            /* background-color: ; */
+            /* border-radius: 10px; */
+            /* position: fixed; */
+            background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(91, 97, 103));
+            
+        
+          
+        }
+        #hero .menu_plate .logo{
+          
+            /* border: 2px solid red; */
+            width: 400px;
+            /* height: 50px; */
+        }
+        
+        #hero .menu_plate .menu{
+          
+            /* border: 2px solid blue; */
+            width: 100%;
+            /* line-height: 50px; */
+            /* height: 50px; */
+          
+            
+        }
+
+        #hero .menu_plate .menu ul{
+            /* border: 2px solid blueviolet; */
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            flex-wrap: wrap;
+            line-height: normal;
+          
+         
+            /* line-height: ; */
+        }
+        #hero .menu_plate .menu ul li{
+            padding-top:  10px;
+            /* border: 2px solid sienna; */
+            /* height: 30px; */
+        }
+        #hero .menu_plate .menu ul li a{
+            /* border: 2px solid fuchsia; */
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            color: bisque;
+            font-family: inherit;
+           
+        }
+        #hero .menu_plate .menu ul li a:hover {
+            background-color: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+            border: 2px solid rgb(27, 27, 144);
+            box-shadow: 0px 0px 15px blue;
+            border-radius: 15px;
+           
+
+        }
+       #hero .menu_plate .menu ul li ul{
+        display: none;
+        background-color:rgb(91, 97, 103);
+       
+        
+       }
+       #hero .menu_plate .menu ul li:hover ul {
+        display: block;
+        position: absolute;
+        border-radius: 15px;
+       }
+       #hero .menu_plate .menu ul li ul li #submenu2 {
+        display: none;
+
+       }
+       #hero .menu_plate .menu ul li ul li:hover  #submenu2{
+        display: inline;
+        /* flex-direction: column;
+        justify-content: flex-end; */
+       }
+
+       #hero .logo h1{
+        width: 200px;
+        height: 50px;
+        padding-top: 8px;
+        padding-left: 10px;
+        color: bisque;
+       }
+       .wave{
+        /* border: 3px solid red; */
+        width: 100%;
+        height: 300px;
+        background-image: linear-gradient(to left, rgb(0, 0, 0) , rgba(100, 99, 99, 0.733));
+        clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 
+        2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%,
+         11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 
+         19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 
+         42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 
+         36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 
+         45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%,
+          54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 
+          63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 
+          61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%,
+           82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 
+           92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%);
+
+           border-bottom: 20px solid red;
+           z-index: 1;
+       }
+       .wave img{
+        position: absolute;
+        width: 200px;
+        height: 197px;
+       }
+       .wave h1{
+        position: absolute;
+        left: 200px;
+        padding-top: 50px;
+        padding-left: 20px;
+        font-style: oblique;
+        color: antiquewhite;
+    
+       }
+       .wave .think{
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        left: 980px;
+
+
+       }
+       #submemu2{
+        display: none;
+
+       }
+
+
+       #four{
+        /* border: 5px solid red; */
+        height: 600px;
+        position: relative;
+        bottom: 105px;
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content:space-between ;
+        background-image: url(s3.svg);
+        background-position: 50px 0px 0px 0px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+        
+       }
+       #four .subfour1{
+        /* position: absolute; */
+        margin-top: 60px;
+        margin-left: 45px;
+       
+        border: 2px solid rgb(0, 110, 255);
+        height: 400px;
+        width: 300px;
+        padding: 10px;
+        text-align: justify;
+        
+
+       }
+       #four .subfour1:hover{
+        border: 5px solid rgb(0, 110, 255);
+        box-shadow: 0px 0px 15px 0 black;
+        background-color: rgba(127, 182, 253, 0.215);
+       }
+       #four .subfour2{
+        /* position: absolute; */
+       
+       margin-top: 60px;
+       margin-right: 45px;
+       /* margin-bottom: 60px; */
+        border: 2px solid #E44D26;
+        height: 400px;
+        width: 300px;
+        text-align: justify;
+        padding: 10px;
+        
+
+       }
+       #four .subfour2:hover{
+        border: 5px solid #E44D26;
+        box-shadow: 0px 0px 15px 0 black;
+        background-color:#fba48e44;
+       }
+     
+       #five{
+        /* border: 3px solid rgb(255, 0, 0); */
+        height: 100vh;
+        display: flex;
+        
+       }
+       #five .fivesub1{
+        /* border: 2px solid black; */
+        position: relative;
+       }
+       #five .fivesub2{
+        /* border: 2px solid rgb(6, 37, 148); */
+        width: 100%;
+        display: block;
+        padding-left: 45px;
+        padding-top: 20px;
+       
+     
+        
+       }
+       .fivesub2.fivesub2sub1{
+        /* border: 3px solid rgb(0, 0, 0); */
+        padding-left:  20px;
+     
+        width: 100%;
+        position: absolute;
+        
+       }
+       .fivesub2.fivesub2sub2{
+        /* border: 3px solid rgb(0, 0, 0); */
+        position:absolute;
+        padding: 20px;
+        border-radius: 15px;
+        
+       }
+       #five .fivesub1 h1{
+
+        position: relative;
+        bottom: 650px;
+        left: 200px;
+        z-index: 1;
+        /* bottom: 200px; */
+
+       }
+       #six{
+        /* border: 2px solid #E44D26; */
+        height: 80vh;
+        display: flex;
+       }
+       #six .sixsub1{
+        width: 40%;
+        /* border: 2px solid black; */
+        background-image: url(s2.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+       }
+       #six .sixsub2{
+        width: 100%;
+        /* border: 2px solid black; */
+        border-radius: 60px;
+       }
+       .sixsub1 h1{
+        padding-top: 150px;
+       }
+       .sixsub2 iframe{
+        border-radius: 60px;
+        box-shadow: 0px 0px 5px  black;
+       }
+     
+       #thank h1{
+        font-size: 60px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-shadow: #E44D26 ;
+        text-align: center;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="hero">
+        <div class="menu_plate">
+            <div class="logo">
+                <h1>Eduladder</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house-chimney-user"></i> Home</a></li>
+                    <li><a href="#">Services <i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                    <ul id="submenu">
+                    <li><a href="#">Service1</a></li>
+                    <li><a href="#">Service2</a></li>
+                    <li><a href="#">Service3</a>
+                        <ul id="submenu2">
+                            <li><a href="#">ServiceX</a></li>
+                            <li><a href="#">ServiceY</a></li>
+                            <li><a href="#">ServiceZ</a></li>
+                            <li><a href="#">ServiceZ+</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="#">Service4</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#"><i class="fa-brands fa-slack"></i> Products</a></li>
+                    <li><a href="#"><i class="fa-regular fa-address-card"></i> AboutUs</a></li>
+                    <li><a href="#">ContectUs</a></li>
+                    <li><a href="log.html">Log in</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="wave">
+      
+        
+      
+        <img src="programer.svg" alt=" programer svg img">
+        <h1>"Programming is not typing it ia art of thinking"</h1>
+        <img class="think" src="thinker.svg" alt="">
+
+    </div>
+    <div id="four">
+       
+       
+        <div class="subfour1">
+            <h1>
+                Css designing
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ea nam debitis facere nisi eius sunt, libero enim rem 
+                 nemo eveniet quos dolore minima repudiandae magnam maxime 
+                 molestiae consectetur vero quo iusto
+                 perferendis minus voluptates quasi! Alias necessitatibus
+                  dignissimos iste qui libero hic, vero, quidem ipsum explicabo
+                   iure cupiditate, corporis ipsa. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Explicabo dicta eligendi voluptas temporibus exercitationem, laudantium 
+                    praesentium libero sequi reprehenderit ipsa. Lorem, ipsum dolor sit amet
+                     consectetur  elit. At necessitatibus ipsam, recusandae corporis
+                      architecto nemo voluptates excepturi reiciendis asperiores? Tenetur!</p>
+        </div>
+        <div class="subfour2">
+            <h1>
+              HTML markup
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Ea nam debitis facere nisi eius sunt, libero enim rem 
+                 nemo eveniet quos dolore minima repudiandae magnam maxime 
+                 molestiae consectetur vero quo iusto
+                 perferendis minus voluptates quasi! Alias necessitatibus
+                  dignissimos iste qui libero hic, vero, quidem ipsum explicabo
+                   iure cupiditate, corporis ipsa. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Explicabo dicta eligendi voluptas temporibus exercitationem, laudantium 
+                    praesentium libero sequi reprehenderit ipsa. Lorem, ipsum dolor sit amet
+                     consectetur  elit. At necessitatibus ipsam, recusandae corporis
+                      architecto nemo voluptates excepturi reiciendis asperiores? Tenetur!</p>
+
+        </div>
+
+       
+    </div>
+    <div id="five">
+
+<div class="fivesub1">
+
+    <img src="s1.svg" alt="">
+    <h1>"Here is our content"</h1>
+</div>
+<div class="fivesub2">
+
+    <div class="fivesub2sub1">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/PsvIGc0HsG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="fivesub2sub2"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/cRVrQh1iZBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+</div>
+
+
+    </div>
+    <div id="six">
+        <div class="sixsub1">
+            <h1 >You can find me from Here</h1>
+            
+        </div>
+        <div class="sixsub2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14881.795449626643!2d79.0716315!3d21.1743207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a666e508bec48aa!2sEduladdr%20Solutions!5e0!3m2!1sen!2sin!4v1664995957218!5m2!1sen!2sin" width="100%" height="100%"    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div id="thank"><h1>Thank you</h1></div>
+    
+    <script src="https://kit.fontawesome.com/29475c3777.js" crossorigin="anonymous"></script>
+</body>
+</html>
